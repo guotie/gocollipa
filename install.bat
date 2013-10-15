@@ -16,6 +16,7 @@ if not exist log mkdir log
 go get -u github.com/go-sql-driver/mysql
 go get -u github.com/gorilla/mux
 go get -u github.com/gorilla/securecookie
+go get -u github.com/astaxie/beego/cache
 
 gofmt -w src
 

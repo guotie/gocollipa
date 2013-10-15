@@ -14,7 +14,7 @@ set GOPATH=%~dp0..\thirdparty
 
 go get -u github.com/go-sql-driver/mysql
 go get -u github.com/gorilla/mux
-go get -u github.com/gorilla/sessions
+go get -u github.com/gorilla/securecookie
 go get -u github.com/astaxie/beego/cache
 
 :: hg clone https://code.google.com/p/go.net src/go.net

@@ -9,17 +9,21 @@ fi
 
 CURDIR=`pwd`
 OLDGOPATH="$GOPATH"
-export GOPATH="$CURDIR:$CURDIR/../thirdparty"
+export GOPATH="$GOPATH:$CURDIR"
 
 if [ ! -d log ]; then
     mkdir log
 fi
 
+go get -u github.com/go-sql-driver/mysql
+go get -u github.com/gorilla/mux
+go get -u github.com/gorilla/securecookie
+go get -u github.com/astaxie/beego/cache
+
 gofmt -w src
 
-go install studygolang
+go install gocollipa
 
 export GOPATH="$OLDGOPATH"
-export PATH="$OLDPATH"
 
 echo 'finished'
